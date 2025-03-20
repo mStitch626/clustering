@@ -11,25 +11,20 @@ from scipy.spatial.distance import cdist
 
 
 def load_csv_dataset(path, columns = None, take = None, **options):
-    
     data = pd.read_csv(path, names=columns, **options)
-    
     if take:
         pass
-    
     return data
 
 def fit_transform(scaler,data, **options):
     return pd.DataFrame(scaler.fit_transform(data), **options)
 
-
- 
 def kmeans(data, k, no_of_iterations=100):
     idx = np.random.choice(len(data), k, replace=False)
     centroids = data[idx, :]
     
     for _ in range(no_of_iterations): 
-        distances = cdist(data, centroids, 'euclidean')
+        distances = cdist(data, centroids, 'euclidean') # change to Gower dist 
         points = np.array([np.argmin(i) for i in distances])
         
         new_centroids = []
