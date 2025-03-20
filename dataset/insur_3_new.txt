@@ -1,0 +1,9 @@
+@relation assur
+@attribute marque {RENAULT,PEUGEOT,LADA,CITROEN,TOYOTA,FIAT,NISSAN,BMW,VOLKSWAGEN,HONDA,AUDI,MERCEDESBENZ,FORD,VOLVO,TALBOT,SEAT,OPEL,ALFAROMEO,ROVER,MAZDA,PORSCHE,AUSTIN,AUTRES}
+@attribute usage {Professionnel,Prive,Trajets,deplacements}
+@attribute profession {Artisan,Salarie,Fonctionnaire,Retraite,Profliberale,Agriculteur,Societe,Commerce,Etudiant,Marin,Administratif,Ministere,Autre}
+@attribute puissance real
+@attribute garage real
+@attribute contrat real
+@attribute GOODBAD {0,1}
+@data
